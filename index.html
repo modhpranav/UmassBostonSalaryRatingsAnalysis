@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="app.css">
+<link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css" rel="stylesheet" type="text/css" />
+<svg id="starrySky" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"></svg>
+<div class="chart1">
+    <div class="dropdown dropdown-center">
+        <div class="flex items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/University_of_Massachusetts_Boston_logo.svg/770px-University_of_Massachusetts_Boston_logo.svg.png"
+                alt="University Logo" width="30" height="10">&nbsp; &nbsp;
+            <select class="select select-error w-full max-w-xs">
+                <option disabled selected>Select Department</option>
+            </select>&nbsp; &nbsp;
+            <label for="my_modal_6" class="btn" id="modal-button" hidden>Insights on Ratings-Salaries</label>
+        </div>
+        <div>
+            <p id="stats"></p>
+            <p id="ratingStats"></p>
+            <p id="salaryStats"></p>
+        </div>
+    </div>
+    <div style="padding-left: 2.5%; align-items: center; height: 100vh;">
+        <div className="flex items-center space-x-4 relative top-50 right-4 z-10">
+            <div className="grid grid-cols-4 gap-4">
+                <div class="chart" id="top5Chart"></div>&nbsp; &nbsp; &nbsp; &nbsp;
+                <div class="chart" id="lowest5Chart"></div>&nbsp; &nbsp; &nbsp; &nbsp;
+                <div class="chart" id="ratingChart"></div>
+                <div class="chart" id="ratingDonut"></div>&nbsp; &nbsp; &nbsp; &nbsp;
+                <div class="chart" id="top5Chart2"></div>&nbsp; &nbsp; &nbsp; &nbsp;
+                <div class="chart" id="lowest5Chart2"></div>&nbsp; &nbsp; &nbsp; &nbsp;
+            </div>
+        </div>
+    </div>
+</div>
+<input type="checkbox" id="my_modal_6" class="modal-toggle" />
+<div class="modal" role="dialog">
+    <div class="modal-box w-08/10 max-w-2xl">
+        <h3 class="font-bold text-lg">Professor Ratings vs Salary</h3>
+        <div class="modal-body">
+            <div class="chart" id="scatterPlot"></div>
+            <div class="modal-action">
+                <label for="my_modal_6" class="btn">Close!</label>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="gsap.js"></script>
+    <script src="top_fetch_chart.js"></script>
+    <script src="chart2.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    </body>
+
+    </html>
